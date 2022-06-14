@@ -1,0 +1,400 @@
+{
+  "name": "TrackAndFlightPlanRecord",
+  "namespace": "io.confluent.data.faa",
+  "type": "record",
+  "fields": [
+    {
+      "name": "recSeqNum",
+      "type": [
+        "null",
+        "int"
+      ]
+    },
+    {
+      "name": "recSrc",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "recType",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "track",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "TrackRecord",
+          "namespace": "io.confluent.data.faa",
+          "fields": [
+            {
+              "name": "trackNum",
+              "type": "int"
+            },
+            {
+              "name": "mrtTime",
+              "type": [
+                "null",
+                {
+                  "type": "long",
+                  "logicalType": "timestamp-millis"
+                }
+              ]
+            },
+            {
+              "name": "status",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "acAddress",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "xPos",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "yPos",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "lat",
+              "type": [
+                "null",
+                "double"
+              ]
+            },
+            {
+              "name": "lon",
+              "type": [
+                "null",
+                "double"
+              ]
+            },
+            {
+              "name": "vVert",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "vx",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "vy",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "vVertRaw",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "vxRaw",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "vyRaw",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "frozen",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "new",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "pseudo",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "adsb",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "reportedBeaconCode",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "reportedAltitude",
+              "type": [
+                "null",
+                "int"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "flightPlan",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "FlightPlan",
+          "namespace": "io.confluent.data.faa",
+          "fields": [
+            {
+              "name": "sfpn",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "ocr",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "rnav",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "scratchPad1",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "scratchPad2",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "cps",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "runway",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "assignedBeaconCode",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "requestedAltitude",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "assignedAltitude",
+              "type": [
+                "null",
+                "int"
+              ]
+            },
+            {
+              "name": "category",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "dbi",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "acid",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "acType",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "entryFix",
+              "type": "string"
+            },
+            {
+              "name": "exitFix",
+              "type": "string"
+            },
+            {
+              "name": "airport",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "flightRules",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "rawFlightRules",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "type",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "ptdTime",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "status",
+              "type": "string"
+            },
+            {
+              "name": "delete",
+              "type": ["null","int"]
+            },
+            {
+              "name": "suspended",
+              "type": ["null","int"]
+            },
+            {
+              "name": "lld",
+              "type": ["null","string"]
+            },
+            {
+              "name": "ecid",
+              "type": ["null","string"]
+            },
+            {
+              "name": "eqptSuffix",
+              "type": ["null","string"]
+            }
+          ]
+        }
+      ]
+    },
+    {"name": "enhancedData", "type": [
+      "null",
+      {
+        "type": "record",
+        "name": "enhancedData",
+        "fields": [
+          {
+            "name": "eramGufi",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "sfdpsGufi",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "callsign",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "departureAirport",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "destinationAirport",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "aircraftType",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "beaconCode",
+            "type": ["null", "string"]
+          },
+          {
+            "name": "s",
+            "type": ["null", "int"]
+          }
+        ]
+      }
+    ]}
+  ]
+}
